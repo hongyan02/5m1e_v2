@@ -15,13 +15,12 @@ export default function Header() {
         handleKeyPress,
     } = useHeaderLogic();
 
-
     return (
-        <header className="w-full h-10 bg-white flex justify-between items-center">
+        <header className="w-full h-10 bg-white flex justify-between items-center pt-2 pb-2">
             <div className="flex items-center gap-2 pl-4">
                 <span className="text-sm font-medium whitespace-nowrap">电芯条码：</span>
                 <Input
-                    placeholder="请输入查询内容"
+                    placeholder="请输入电芯条码"
                     value={materialLotCode}
                     onChange={(e) => setMaterialLotCode(e.target.value)}
                     onPressEnter={handleKeyPress}
@@ -34,7 +33,6 @@ export default function Header() {
                     {error && <span className="text-red-500 text-sm">查询失败</span>}
                     {prod_line_code && <Tag color="blue">{prod_line_code}</Tag>}
                 </div>
-                
             </div>
         </header>
     );

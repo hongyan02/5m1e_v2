@@ -5,7 +5,7 @@ export const initialNodes: Node[] = [
     //制片段
     {
         id: "0",
-        type: "group",
+        type: "Node_CustomGroupNode",
         data: { label: "制片段" },
         position: { x: 0, y: 0 },
         style: {
@@ -99,7 +99,7 @@ export const initialNodes: Node[] = [
     },
     {
         id: "1",
-        type: "group",
+        type: "Node_CustomGroupNode",
         data: { label: "切叠段" },
         position: { x: 0, y: 500 },
         style: {
@@ -123,7 +123,7 @@ export const initialNodes: Node[] = [
     // 组装段
     {
         id: "2",
-        type: "group",
+        type: "Node_CustomGroupNode",
         data: { label: "组装段" },
         position: { x: 0, y: 650 },
         style: {
@@ -227,7 +227,7 @@ export const initialNodes: Node[] = [
     },
     {
         id: "3",
-        type: "group",
+        type: "Node_CustomGroupNode",
         data: { label: "化成段" },
         position: { x: 0, y: 900 },
         style: {
@@ -493,7 +493,7 @@ export const initialNodes: Node[] = [
     },
     {
         id: "4",
-        type: "group",
+        type: "Node_CustomGroupNode",
         data: { label: "包装段" },
         position: { x: 0, y: 1350 },
         style: {

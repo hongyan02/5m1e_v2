@@ -3,14 +3,9 @@
 import "@xyflow/react/dist/style.css";
 import "@xyflow/react/dist/base.css";
 import React from "react";
+import { ReactFlow, Background, BackgroundVariant, Controls, MarkerType } from "@xyflow/react";
 import {
-    ReactFlow,
-    Background,
-    BackgroundVariant,
-    Controls,
-    MarkerType,
-} from "@xyflow/react";
-import {
+    CustomGroupNode,
     Left_with_Right,
     Right_with_Left,
     Left_with_Bottom,
@@ -38,16 +33,11 @@ const nodeTypes = {
     Node_Top_with_Right: Top_with_Right,
     Node_Top_with_Left: Top_with_Left,
     Node_Left_with_Right_with_Bottom: Left_with_Right_with_Bottom,
+    Node_CustomGroupNode: CustomGroupNode,
 };
 
 export default function FlowChart() {
-    const {
-        nodes,
-        edges,
-        onNodesChange,
-        onEdgesChange,
-        handleNodeClick,
-    } = useFlowLogic();
+    const { nodes, edges, onNodesChange, onEdgesChange, handleNodeClick } = useFlowLogic();
 
     return (
         <div className="w-full h-full min-h-[600px] relative">
